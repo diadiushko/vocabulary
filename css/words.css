@@ -1,5 +1,7 @@
 .arrow {
   width: 50px;
-  height: 24px;
-  background: url('A:/Atom/vocabulary/img/arrow.svg');  
+  height: 50px;
+  background: url('A:/Atom/vocabulary/img/arrow.svg') no-repeat;
+  background-size: cover;
+  transform: scale(-1);
 }
