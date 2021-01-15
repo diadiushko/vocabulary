@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Staatliches&display=swap');
+
+body header {
+    font-size: 36px;
+    font-family: "Montserrat", sans-serif;
+    font: 400px;
+    width: 100%;
+    padding: 0 50px;
+}
+
+.hat {
+    background: #b26a95;
+    width: 100vw;
+    font-size: 36px;
+    font-family: "Montserrat", sans-serif;
+    font: 600px;
+}
+
+.hat h1 {
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+    padding: 23px 0;
+}
+
+.part {
+    margin: 50px auto 0;
+}
+
+.part_title {
+    border-radius: 10px;
+    padding: 15px 0;
+    width: 100%;
+    z-index: 10;
+
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.part_drop {
+    position: relative;
+    display: none;
+    transform: translateY(-100%);
+    max-width: 280px;
+    margin: auto;
+    z-index: -1;
+    transition: .2s linear;
+}
+
+.part_drop.active {
+    transform: translateY(0);
+}
+
+.drop_button {
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    background: none;
+    margin: 10px 0;
+    font-weight: 400;
+    flex: 1 1 0;
+}
+
+.drop_button:last-child {
+    border-left: 1px solid rgba(0, 0, 0, 0.35);
+}
