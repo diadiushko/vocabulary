@@ -94,3 +94,14 @@ const drop = (option) => {
 }
 
 partTitles.forEach(e => drop(e))
+
+const dropListener = e => {
+    if (e.target.dataset.drop) {
+        document.removeEventListener('click', dropListener)
+        if (document.querySelector(e.target.dataset.drop).classList.contains('active')) e.target.close()
+        else e.target.open()
+        setTimeout(() => {
+            document.addEventListener('click', dropListener)
+        }, 200);
+    }
+}
