@@ -44,16 +44,17 @@ body header {
 
 .part_drop {
     position: relative;
-    display: none;
-    transform: translateY(-100%);
-    max-width: 280px;
+    display: flex;
+    max-width: 350px;
     margin: auto;
+    height: 0;
     z-index: -1;
     transition: .2s linear;
+    overflow: hidden;
 }
 
 .part_drop.active {
-    transform: translateY(0);
+    height: 64px;
 }
 
 .drop_button {

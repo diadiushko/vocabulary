@@ -71,37 +71,14 @@ const createDrops = (options) => {
     );
 };
 
-createDrops(data)
+createDrops(data);
 const partTitles = document.querySelectorAll(".part_title");
 
-const drop = (option) => {
-    let target = document.querySelector(option.dataset.drop)
-    option.open = () => {
-        partTitles.forEach(q => {
-            if (q !== option) q.close()
-        })
-        target.style.display = "flex"
-        setTimeout(() => {
-            target.classList.add('active')
-        }, 0);
-    };
-    option.close = () => {
-        target.classList.remove('active')
-        setTimeout(() => {
-            target.style.display = "none"
-        }, 200);
-    };
-}
-
-partTitles.forEach(e => drop(e))
-
-const dropListener = e => {
-    if (e.target.dataset.drop) {
-        document.removeEventListener('click', dropListener)
-        if (document.querySelector(e.target.dataset.drop).classList.contains('active')) e.target.close()
-        else e.target.open()
-        setTimeout(() => {
-            document.addEventListener('click', dropListener)
-        }, 200);
+const dropListener = (event) => {
+    if (event.target.dataset.drop) {
+        let target = document.querySelector(event.target.dataset.drop);
+        document
+            .querySelectorAll(".part_drop.active").forEach(e => e !== target ? e.classList.remove("active") : void 0);
+        target.classList.toggle('active')
     }
-}
+};
