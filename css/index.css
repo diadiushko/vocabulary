@@ -45,7 +45,7 @@ body header {
 .part_drop {
     position: relative;
     display: flex;
-    max-width: 350px;
+    max-width: 90%;
     margin: auto;
     height: 0;
     z-index: -1;
